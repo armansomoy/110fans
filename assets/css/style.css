@@ -56,7 +56,7 @@ ol {
     left: 0;
     height: 100%;
     width: 100%;
-    background: linear-gradient(90deg, rgba(255, 0, 0, 0.9) 0%, rgba(45, 25, 61, 0.9) 0%, rgba(83, 100, 141, 0) 100%); }
+    background: linear-gradient(90deg, rgba(255, 0, 0, 0.9) 0%, rgba(97, 6, 6, 0.9) 0%, rgba(83, 100, 141, 0) 100%); }
   #banner-part h2 {
     padding: 350px 0px 0px;
     font-weight: bold;
@@ -64,7 +64,19 @@ ol {
     font-size: 56px; }
   #banner-part p {
     color: #fff;
-    font-size: 20px; }
+    font-size: 20px;
+    padding: 20px 50px 30px 0px; }
+  #banner-part a {
+    padding: 20px 30px;
+    background-color: #DC3545;
+    color: #fff;
+    border-radius: 40px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: all 0.3s;
+    border: 2px solid #DC3545; }
+    #banner-part a:hover {
+      border: 2px solid #DC3545;
+      background-color: transparent; }
 
 header {
   position: absolute;
@@ -92,7 +104,7 @@ header {
     header nav .nav-item .user-btn {
       width: 100px;
       height: 50px;
-      border: 2px solid #f36868;
+      border: 2px solid #DC3545;
       border-radius: 35px;
       line-height: 35px;
       text-align: center;
@@ -101,23 +113,25 @@ header {
       font-size: 16px;
       line-height: 30px; }
       header nav .nav-item .user-btn:hover {
-        background-color: #f36868;
+        background-color: #DC3545;
         color: #fff !important; }
     header nav .nav-item .login-btn {
-      width: 80px;
+      width: 100px;
       height: 50px;
-      background-color: #f36868;
+      background-color: #DC3545;
       border-radius: 35px;
       line-height: 35px;
       text-align: center;
       color: #fff !important;
       margin-right: 10px;
-      border: 2px solid #f36868;
+      border: 2px solid #DC3545;
       transition: all 0.3s;
       font-size: 16px;
       line-height: 30px; }
+      header nav .nav-item .login-btn i {
+        margin-right: 5px; }
       header nav .nav-item .login-btn:hover {
-        border: 2px solid #f36868;
+        border: 2px solid #DC3545;
         background-color: transparent; }
     header nav .search-box {
       position: relative; }
@@ -131,12 +145,90 @@ header {
         width: 42px;
         height: 43px;
         border-radius: 40px;
-        background-color: #f36868;
+        background-color: #DC3545;
         position: absolute;
         right: 14px;
         top: 4px;
         color: #fff; }
       header nav .search-box ::placeholder {
         color: #fff; }
+
+#testing-part {
+  padding: 100px 0px;
+  background-color: #dc354514; }
+  #testing-part .text-box {
+    background-color: #fff;
+    color: #2c2c2c;
+    padding: 50px;
+    border-radius: 5px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; }
+    #testing-part .text-box i {
+      color: #2c2c2c;
+      height: 80px;
+      width: 80px;
+      line-height: 80px;
+      font-size: 30px;
+      border-radius: 50%;
+      margin-bottom: 25px;
+      transition: all 0.3s;
+      cursor: pointer;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; }
+    #testing-part .text-box:hover i {
+      background-color: #DC3545;
+      color: #fff; }
+    #testing-part .text-box h4 {
+      font-weight: 600;
+      font-size: 22px; }
+    #testing-part .text-box p {
+      font-size: 16px; }
+
+#creators {
+  padding: 100px 0px; }
+  #creators h4 {
+    font-weight: 600;
+    font-size: 40px;
+    padding-bottom: 10px; }
+  #creators p {
+    font-size: 18px;
+    color: #999; }
+  #creators a {
+    padding: 15px 24px;
+    background-color: #DC3545;
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 40px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: all 0.3s;
+    border: 2px solid #DC3545; }
+    #creators a:hover {
+      border: 2px solid #DC3545;
+      background-color: transparent;
+      color: #2c2c2c; }
+
+#supporters {
+  padding: 100px 0px;
+  background-color: #dc354514; }
+  #supporters h4 {
+    font-weight: 600;
+    font-size: 40px;
+    padding-bottom: 10px; }
+  #supporters p {
+    font-size: 18px;
+    color: #999; }
+  #supporters a {
+    padding: 15px 24px;
+    background-color: #DC3545;
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 40px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: all 0.3s;
+    border: 2px solid #DC3545; }
+    #supporters a:hover {
+      border: 2px solid #DC3545;
+      background-color: transparent;
+      color: #2c2c2c; }
 
 /*# sourceMappingURL=style.css.map */

@@ -12,7 +12,7 @@
         left: 0;
         height: 100%;
         width: 100%;
-        background: linear-gradient(90deg, rgba(255, 0, 0, 0.9) 0%, rgba(45, 25, 61, 0.9)0%, rgba(83, 100, 141, 0) 100%);
+        background: linear-gradient(90deg, rgba(255, 0, 0, 0.9) 0%, rgba(97, 6, 6, 0.9)0%, rgba(83, 100, 141, 0) 100%);
     }
 
     h2 {
@@ -25,6 +25,22 @@
     p {
         color: $white;
         font-size: 20px;
+        padding: 20px 50px 30px 0px;
+    }
+
+    a {
+        padding: 20px 30px;
+        background-color: $red;
+        color: $white;
+        border-radius: 40px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        transition: all 0.3s;
+        border: 2px solid $red;
+
+        &:hover {
+            border: 2px solid $red;
+            background-color: transparent;
+        }
     }
 }
 
@@ -63,7 +79,7 @@ header {
             .user-btn {
                 width: 100px;
                 height: 50px;
-                border: 2px solid #f36868;
+                border: 2px solid $red;
                 border-radius: 35px;
                 line-height: 35px;
                 text-align: center;
@@ -79,7 +95,7 @@ header {
             }
 
             .login-btn {
-                width: 80px;
+                width: 100px;
                 height: 50px;
                 background-color: $red;
                 border-radius: 35px;
@@ -91,6 +107,10 @@ header {
                 transition: all 0.3s;
                 font-size: 16px;
                 line-height: 30px;
+
+                i {
+                    margin-right: 5px;
+                }
 
                 &:hover {
                     border: 2px solid $red;
@@ -115,7 +135,7 @@ header {
                 width: 42px;
                 height: 43px;
                 border-radius: 40px;
-                background-color: #f36868;
+                background-color: $red;
                 position: absolute;
                 right: 14px;
                 top: 4px;
@@ -125,6 +145,114 @@ header {
             ::placeholder {
                 color: $white;
             }
+        }
+    }
+}
+
+#testing-part {
+    padding: 100px 0px;
+    background-color: #dc354514;
+
+    .text-box {
+        background-color: $white;
+        color: $black;
+        padding: 50px;
+        border-radius: 5px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+        i {
+            color: $black;
+            height: 80px;
+            width: 80px;
+            line-height: 80px;
+            font-size: 30px;
+            border-radius: 50%;
+            margin-bottom: 25px;
+            transition: all 0.3s;
+            cursor: pointer;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+
+        &:hover i {
+            background-color: $red;
+            color: $white;
+        }
+
+        h4 {
+            font-weight: 600;
+            font-size: 22px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+    }
+}
+
+#creators {
+    padding: 100px 0px;
+
+    h4 {
+        font-weight: 600;
+        font-size: 40px;
+        padding-bottom: 10px;
+    }
+
+    p {
+        font-size: 18px;
+        color: #999;
+    }
+
+    a {
+        padding: 15px 24px;
+        background-color: $red;
+        color: #fff;
+        font-weight: 600;
+        font-size: 14px;
+        border-radius: 40px;
+        box-shadow: rgba(100, 100, 111, 0.20) 0px 7px 29px 0px;
+        transition: all 0.3s;
+        border: 2px solid $red;
+
+        &:hover {
+            border: 2px solid $red;
+            background-color: transparent;
+            color: $black;
+        }
+    }
+}
+
+#supporters {
+    padding: 100px 0px;
+    background-color: #dc354514;
+
+    h4 {
+        font-weight: 600;
+        font-size: 40px;
+        padding-bottom: 10px;
+    }
+
+    p {
+        font-size: 18px;
+        color: #999;
+    }
+
+    a {
+        padding: 15px 24px;
+        background-color: $red;
+        color: #fff;
+        font-weight: 600;
+        font-size: 14px;
+        border-radius: 40px;
+        box-shadow: rgba(100, 100, 111, 0.20) 0px 7px 29px 0px;
+        transition: all 0.3s;
+        border: 2px solid $red;
+
+        &:hover {
+            border: 2px solid $red;
+            background-color: transparent;
+            color: $black;
         }
     }
 }
