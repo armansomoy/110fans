@@ -70,13 +70,15 @@ ol {
     padding: 20px 30px;
     background-color: #DC3545;
     color: #fff;
+    font-weight: 600;
     border-radius: 40px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    transition: all 0.3s;
-    border: 2px solid #DC3545; }
+    transition: all .2s ease-in-out;
+    background: #020024;
+    background: linear-gradient(90deg, #020024 0%, #ffbd80 0%, #ff1f8e 100%); }
     #banner-part a:hover {
-      border: 2px solid #DC3545;
-      background-color: transparent; }
+      color: #000;
+      padding: 20px 35px; }
 
 header {
   position: absolute;
@@ -159,7 +161,7 @@ header {
   #desktop-image h2 {
     font-weight: 600;
     font-size: 32px; }
-  #desktop-image p {
+  #desktop-image .heading-p {
     font-size: 16px;
     padding: 10px 150px 50px; }
   #desktop-image .mac {
@@ -174,19 +176,26 @@ header {
       left: 30px;
       position: absolute;
       background-color: turquoise; }
+  #desktop-image .side-text {
+    position: absolute;
+    right: 0;
+    width: 500px; }
+    #desktop-image .side-text p {
+      font-size: 18px;
+      padding: 50px 50px 30px; }
   #desktop-image .macbook {
-    background-image: url(../images/mac.png);
+    background-image: url(../images/macbook.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     position: absolute;
-    height: 415px;
+    height: 286px;
     width: 500px;
     right: 14%;
     bottom: 65px; }
     #desktop-image .macbook .macbook-wallpaper {
-      top: 18px;
-      left: 20px;
+      top: 15px;
+      left: 55px;
       position: absolute;
       background-color: turquoise; }
 
@@ -233,15 +242,15 @@ header {
     background-color: #DC3545;
     color: #fff;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 16px;
     border-radius: 40px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    transition: all 0.3s;
-    border: 2px solid #DC3545; }
+    transition: all .2s ease-in-out;
+    background: #020024;
+    background: linear-gradient(90deg, #020024 0%, #ffbd80 0%, #ff1f8e 100%); }
     #creators a:hover {
-      border: 2px solid #DC3545;
-      background-color: transparent;
-      color: #2c2c2c; }
+      color: #000;
+      padding: 15px 30px; }
 
 #supporters {
   padding: 100px 0px;
@@ -258,14 +267,94 @@ header {
     background-color: #DC3545;
     color: #fff;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 16px;
     border-radius: 40px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    transition: all 0.3s;
-    border: 2px solid #DC3545; }
+    transition: all .2s ease-in-out;
+    background: #020024;
+    background: linear-gradient(90deg, #020024 0%, #ffbd80 0%, #ff1f8e 100%); }
     #supporters a:hover {
-      border: 2px solid #DC3545;
       background-color: transparent;
-      color: #2c2c2c; }
+      color: #000;
+      padding: 15px 30px; }
+
+#creators-earnings {
+  padding: 100px 0px;
+  /*hide the outline behind the border*/ }
+  #creators-earnings .range-slider {
+    width: 300px;
+    text-align: center;
+    position: relative; }
+    #creators-earnings .range-slider .rangeValues {
+      display: block; }
+  #creators-earnings input[type=range] {
+    -webkit-appearance: none;
+    border: 1px solid white;
+    width: 500px;
+    position: absolute;
+    left: 0; }
+  #creators-earnings input[type=range]::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 10px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px; }
+  #creators-earnings input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+    background: #21c1ff;
+    margin-top: -2px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1; }
+  #creators-earnings input[type=range]:focus {
+    outline: none; }
+  #creators-earnings input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #ccc; }
+  #creators-earnings input[type=range]::-moz-range-track {
+    width: 300px;
+    height: 5px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px; }
+  #creators-earnings input[type=range]::-moz-range-thumb {
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: #21c1ff; }
+  #creators-earnings input[type=range]:-moz-focusring {
+    outline: 1px solid white;
+    outline-offset: -1px; }
+  #creators-earnings input[type=range]::-ms-track {
+    width: 300px;
+    height: 5px;
+    /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
+    background: transparent;
+    /*leave room for the larger thumb to overflow with a transparent border */
+    border-color: transparent;
+    border-width: 6px 0;
+    /*remove default tick marks*/
+    color: transparent;
+    z-index: -4; }
+  #creators-earnings input[type=range]::-ms-fill-lower {
+    background: #777;
+    border-radius: 10px; }
+  #creators-earnings input[type=range]::-ms-fill-upper {
+    background: #ddd;
+    border-radius: 10px; }
+  #creators-earnings input[type=range]::-ms-thumb {
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: #21c1ff; }
+  #creators-earnings input[type=range]:focus::-ms-fill-lower {
+    background: #888; }
+  #creators-earnings input[type=range]:focus::-ms-fill-upper {
+    background: #ccc; }
 
 /*# sourceMappingURL=style.css.map */

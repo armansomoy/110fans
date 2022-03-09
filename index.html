@@ -84,7 +84,8 @@
       <div class="row">
         <div class="col-lg-12 text-center">
           <h2>Lorem ipsum dolor sit amet consectetur </h2>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit, aspernaturadipisicing elit. Velit,
+          <p class="heading-p">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit, aspernaturadipisicing
+            elit. Velit,
             aspernatur.</p>
         </div>
         <div class="col-lg-8">
@@ -95,10 +96,12 @@
           </div>
         </div>
         <div class="col-lg-4">
-          <p class="side-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt, eum! amet consectetur
-            adipisicing elit.
-            Incidunt, eum! amet consectetur adipisicing elit. Incidunt, eum! amet consectetur adipisicing elit.
-            Incidunt, eum!</p>
+          <div class="side-text">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt, eum! amet consectetur
+              adipisicing elit.
+              Incidunt, eum! amet consectetur adipisicing elit. Incidunt, eum! amet consectetur adipisicing elit.
+              Incidunt, eum!</p>
+          </div>
           <div class="macbook">
             <div class="macbook-wallpaper">
               <img src="./assets/images/wallpaper-macbook.jpg" alt="">
@@ -176,6 +179,22 @@
   <!-- creators ends-->
 
 
+  <!-- creators-earnings start -->
+  <section id="creators-earnings">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <p>Price Range</p>
+          <div class="range-slider">
+            <span class="rangeValues"></span>
+            <input value="1000" min="1000" max="50000" step="500" type="range">
+            <input value="50000" min="1000" max="50000" step="500" type="range">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- creators-earnings ends -->
 
 
 
@@ -189,6 +208,12 @@
 
 
 
+
+  <script>
+    var WGR = WGR || {};
+    WGR.filterPriceRangeMin = 0;
+    WGR.filterPriceRangeMax = 200;
+  </script>
 
 
 
