@@ -15,6 +15,7 @@
     integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="./assets/plugins/wow/css/animate.min.css">
+  <link rel="stylesheet" href="./assets/plugins/rangeslider/rangeslider.css">
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
@@ -183,12 +184,25 @@
   <section id="creators-earnings">
     <div class="container">
       <div class="row">
-        <div class="col-lg-12 text-center">
-          <p>Price Range</p>
-          <div class="range-slider">
-            <span class="rangeValues"></span>
-            <input value="1000" min="1000" max="50000" step="500" type="range">
-            <input value="50000" min="1000" max="50000" step="500" type="range">
+        <div class="col-lg-8 m-auto">
+          <div class="creators-earning-box ">
+            <div id="js-example-change-value">
+              <h2>Creators Earnings Simulator</h2>
+
+              <h6>Audience Size: <output></output></h6>
+              <input type="range" min="10" max="1000" data-rangeslider>
+            </div>
+            <div id="js-example-change-value">
+              <br>
+              <h6>Membership Fee: <output></output></h6>
+              <input type="range" min="5" max="900" data-rangeslider>
+            </div>
+
+            <div class="box-footer text-center">
+              <h4> <span>$455</span> Per Month</h4>
+              <p>Estimate includes the 5% platform fee.</p>
+              <a href="#">Start your creators profile</a>
+            </div>
           </div>
         </div>
       </div>
@@ -209,11 +223,7 @@
 
 
 
-  <script>
-    var WGR = WGR || {};
-    WGR.filterPriceRangeMin = 0;
-    WGR.filterPriceRangeMax = 200;
-  </script>
+
 
 
 
@@ -229,7 +239,10 @@
 
   <script src="./assets/plugins/slick-slider/js/slick.js"></script>
   <script src="./assets/plugins/wow/js/wow.min.js" defer></script>
+  <script src="./assets/plugins/rangeslider/rangeslider.js"></script>
   <script src="./assets/js/script.js"></script>
+
+
 </body>
 
 </html>

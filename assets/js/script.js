@@ -1,46 +1,120 @@
 $(function () {
-  'use strict';
-
+  "use strict";
 
   // WoW Js
-  var wow = new WOW(
-    {
-      offset: 2,
-      mobile: false
-    }
-  )
+  var wow = new WOW({
+    offset: 2,
+    mobile: false,
+  });
   wow.init();
-
 });
+$(function () {
+  var $document = $(document);
+  var selector = "[data-rangeslider]";
+  var $element = $(selector);
 
-//-----JS for Price Range slider-----
+  // For ie8 support
+  var textContent = "textContent" in document ? "textContent" : "innerText";
 
-function getVals(){
-  // Get slider values
-  let parent = this.parentNode;
-  let slides = parent.getElementsByTagName("input");
-    let slide1 = parseFloat( slides[0].value );
-    let slide2 = parseFloat( slides[1].value );
-  // Neither slider will clip the other, so make sure we determine which is larger
-  if( slide1 > slide2 ){ let tmp = slide2; slide2 = slide1; slide1 = tmp; }
-  
-  let displayElement = parent.getElementsByClassName("rangeValues")[0];
-      displayElement.innerHTML = "$" + slide1 + " - $" + slide2;
-}
+  // Example functionality to demonstrate a value feedback
+  function valueOutput(element) {
+    var value = element.value;
+    var output =
+      element.parentNode.getElementsByTagName("output")[0] ||
+      element.parentNode.parentNode.getElementsByTagName("output")[0];
+    output[textContent] = value;
+  }
 
-window.onload = function(){
-  // Initialize Sliders
-  let sliderSections = document.getElementsByClassName("range-slider");
-      for( let x = 0; x < sliderSections.length; x++ ){
-        let sliders = sliderSections[x].getElementsByTagName("input");
-        for( let y = 0; y < sliders.length; y++ ){
-          if( sliders[y].type ==="range" ){
-            sliders[y].oninput = getVals;
-            // Manually trigger event first time to display values
-            sliders[y].oninput();
-          }
-        }
+  $document.on("input", 'input[type="range"], ' + selector, function (e) {
+    valueOutput(e.target);
+  });
+
+  // Example functionality to demonstrate disabled functionality
+  $document.on(
+    "click",
+    '#js-example-disabled button[data-behaviour="toggle"]',
+    function (e) {
+      var $inputRange = $(selector, e.target.parentNode);
+
+      if ($inputRange[0].disabled) {
+        $inputRange.prop("disabled", false);
+      } else {
+        $inputRange.prop("disabled", true);
       }
-}
+      $inputRange.rangeslider("update");
+    }
+  );
 
+  // Example functionality to demonstrate programmatic value changes
+  $document.on("click", "#js-example-change-value button", function (e) {
+    var $inputRange = $(selector, e.target.parentNode);
+    var value = $('input[type="number"]', e.target.parentNode)[0].value;
 
+    $inputRange.val(value).change();
+  });
+
+  // Example functionality to demonstrate programmatic attribute changes
+  $document.on("click", "#js-example-change-attributes button", function (e) {
+    var $inputRange = $(selector, e.target.parentNode);
+    var attributes = {
+      min: $('input[name="min"]', e.target.parentNode)[0].value,
+      max: $('input[name="max"]', e.target.parentNode)[0].value,
+      step: $('input[name="step"]', e.target.parentNode)[0].value,
+    };
+
+    $inputRange.attr(attributes);
+    $inputRange.rangeslider("update", true);
+  });
+
+  // Example functionality to demonstrate destroy functionality
+  $document
+    .on(
+      "click",
+      '#js-example-destroy button[data-behaviour="destroy"]',
+      function (e) {
+        $(selector, e.target.parentNode).rangeslider("destroy");
+      }
+    )
+    .on(
+      "click",
+      '#js-example-destroy button[data-behaviour="initialize"]',
+      function (e) {
+        $(selector, e.target.parentNode).rangeslider({
+          polyfill: false,
+        });
+      }
+    );
+
+  // Example functionality to test initialisation on hidden elements
+  $document.on(
+    "click",
+    '#js-example-hidden button[data-behaviour="toggle"]',
+    function (e) {
+      var $container = $(e.target.previousElementSibling);
+      $container.toggle();
+    }
+  );
+
+  // Basic rangeslider initialization
+  $element.rangeslider({
+    // Deactivate the feature detection
+    polyfill: false,
+
+    // Callback function
+    onInit: function () {
+      valueOutput(this.$element[0]);
+    },
+
+    // Callback function
+    onSlide: function (position, value) {
+      console.log("onSlide");
+      console.log("position: " + position, "value: " + value);
+    },
+
+    // Callback function
+    onSlideEnd: function (position, value) {
+      console.log("onSlideEnd");
+      console.log("position: " + position, "value: " + value);
+    },
+  });
+});
