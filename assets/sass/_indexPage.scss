@@ -1,48 +1,39 @@
 #banner-part {
-    height: 800px;
-    background: url(../images/banner.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    position: relative;
-
-    .overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        background: linear-gradient(90deg, rgba(255, 0, 0, 0.9) 0%, rgba(97, 6, 6, 0.9)0%, rgba(83, 100, 141, 0) 100%);
-    }
+    height: 700px;
 
     h2 {
-        padding: 350px 0px 0px;
+        padding: 300px 0px 0px;
         font-weight: bold;
-        color: $white;
+        color: $black;
         font-size: 56px;
     }
 
     p {
-        color: $white;
+        color: $black;
         font-size: 20px;
         padding: 20px 50px 30px 0px;
     }
 
     a {
         padding: 20px 30px;
-        background-color: $red;
+        background-color: $blue;
         color: $white;
         font-weight: 600;
         border-radius: 40px;
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         transition: all .2s ease-in-out;
-        background: rgb(2, 0, 36);
-        background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(255, 189, 128, 1) 0%, rgba(255, 31, 142, 1) 100%);
+        background: $blue;
+        // background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(255, 189, 128, 1) 0%, rgba(255, 31, 142, 1) 100%);
 
         &:hover {
-            color: #000;
+            color: $white;
             padding: 20px 35px;
         }
+    }
+
+    img {
+        margin-top: 75%;
+        width: 100%;
     }
 }
 
@@ -70,7 +61,7 @@ header {
 
         .nav-item {
             .nav-link {
-                color: $white !important;
+                color: $black !important;
                 line-height: 35px;
                 font-weight: 600;
                 font-size: 18px;
@@ -81,7 +72,7 @@ header {
             .user-btn {
                 width: 100px;
                 height: 50px;
-                border: 2px solid $red;
+                border: 2px solid $blue;
                 border-radius: 35px;
                 line-height: 35px;
                 text-align: center;
@@ -91,7 +82,7 @@ header {
                 line-height: 30px;
 
                 &:hover {
-                    background-color: $red;
+                    background-color: $blue;
                     color: #fff !important;
                 }
             }
@@ -99,13 +90,13 @@ header {
             .login-btn {
                 width: 100px;
                 height: 50px;
-                background-color: $red;
+                background-color: $blue;
                 border-radius: 35px;
                 line-height: 35px;
                 text-align: center;
                 color: #fff !important;
                 margin-right: 10px;
-                border: 2px solid $red;
+                border: 2px solid $blue;
                 transition: all 0.3s;
                 font-size: 16px;
                 line-height: 30px;
@@ -115,8 +106,9 @@ header {
                 }
 
                 &:hover {
-                    border: 2px solid $red;
-                    background-color: transparent;
+                    color: $black !important;
+                    border: 2px solid $blue;
+                    background-color: transparent !important;
                 }
             }
         }
@@ -125,7 +117,7 @@ header {
             position: relative;
 
             input {
-                border: 2px solid $white;
+                border: 2px solid $black;
                 width: 240px;
                 padding: 0px 0px 0px 20px;
                 border-radius: 40px;
@@ -137,15 +129,15 @@ header {
                 width: 42px;
                 height: 43px;
                 border-radius: 40px;
-                background-color: $red;
+                background-color: $blue;
                 position: absolute;
                 right: 14px;
                 top: 4px;
-                color: #fff;
+                color: $white;
             }
 
             ::placeholder {
-                color: $white;
+                color: $black;
             }
         }
     }
@@ -163,6 +155,26 @@ header {
     .heading-p {
         font-size: 16px;
         padding: 10px 150px 50px;
+    }
+
+    .full-image {
+        position: relative;
+
+        img {
+            width: 100%;
+        }
+
+        .side-text {
+            position: absolute;
+            right: -70px;
+            top: 0;
+            width: 500px;
+
+            p {
+                font-size: 18px;
+                padding: 50px 50px 30px;
+            }
+        }
     }
 
 
@@ -217,7 +229,7 @@ header {
 
 #testing-part {
     padding: 100px 0px;
-    background-color: #dc354514;
+    background-color: #5435dc14;
 
     .text-box {
         background-color: $white;
@@ -240,7 +252,7 @@ header {
         }
 
         &:hover i {
-            background-color: $red;
+            background-color: #0037ff;
             color: $white;
         }
 
@@ -272,18 +284,18 @@ header {
 
     a {
         padding: 15px 24px;
-        background-color: $red;
+        background-color: $blue;
         color: #fff;
         font-weight: 600;
         font-size: 16px;
         border-radius: 40px;
         box-shadow: rgba(100, 100, 111, 0.20) 0px 7px 29px 0px;
         transition: all .2s ease-in-out;
-        background: rgb(2, 0, 36);
-        background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(255, 189, 128, 1) 0%, rgba(255, 31, 142, 1) 100%);
+        background: #0037ff;
+        // background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(255, 189, 128, 1) 0%, rgba(255, 31, 142, 1) 100%);
 
         &:hover {
-            color: #000;
+            color: #fff;
             padding: 15px 30px;
         }
     }
@@ -291,7 +303,7 @@ header {
 
 #supporters {
     padding: 100px 0px;
-    background-color: #dc354514;
+    background-color: #5435dc14;
 
     h4 {
         font-weight: 600;
@@ -306,19 +318,51 @@ header {
 
     a {
         padding: 15px 24px;
-        background-color: $red;
+        background-color: $blue;
         color: #fff;
         font-weight: 600;
         font-size: 16px;
         border-radius: 40px;
         box-shadow: rgba(100, 100, 111, 0.20) 0px 7px 29px 0px;
         transition: all .2s ease-in-out;
-        background: rgb(2, 0, 36);
-        background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(255, 189, 128, 1) 0%, rgba(255, 31, 142, 1) 100%);
+        background: #0037ff;
+        // background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(255, 189, 128, 1) 0%, rgba(255, 31, 142, 1) 100%);
 
         &:hover {
-            background-color: transparent;
-            color: #000;
+            color: #fff;
+            padding: 15px 30px;
+        }
+    }
+}
+
+#fees {
+    padding: 100px 0px;
+
+    h4 {
+        font-weight: 600;
+        font-size: 40px;
+        padding-bottom: 10px;
+    }
+
+    p {
+        font-size: 18px;
+        color: #999;
+    }
+
+    a {
+        padding: 15px 24px;
+        background-color: $blue;
+        color: #fff;
+        font-weight: 600;
+        font-size: 16px;
+        border-radius: 40px;
+        box-shadow: rgba(100, 100, 111, 0.20) 0px 7px 29px 0px;
+        transition: all .2s ease-in-out;
+        background: #0037ff;
+        // background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(255, 189, 128, 1) 0%, rgba(255, 31, 142, 1) 100%);
+
+        &:hover {
+            color: #fff;
             padding: 15px 30px;
         }
     }
@@ -327,6 +371,8 @@ header {
 
 #creators-earnings {
     padding: 100px 0px;
+
+    background-color: #5435dc14;
 
     .creators-earning-box {
         padding: 50px;
@@ -351,38 +397,28 @@ header {
 
                 output {
                     font-weight: 700;
-                    color: $red;
+                    color: $blue;
                 }
             }
 
 
 
             .rangeslider__handle {
-                background: $red;
+                background: #fff;
+                ;
                 cursor: pointer;
                 display: inline-block;
                 width: 40px;
                 height: 40px;
                 position: absolute;
-                background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4xIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
-                background-size: 100%;
-                background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(0, 0, 0, 0.1)));
-                background-image: -moz-linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.1));
-                background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.1));
-                background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.1));
-                -moz-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
-                -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
-                box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
-                -moz-border-radius: 50%;
-                -webkit-border-radius: 50%;
                 border-radius: 50%;
+                border: 5px solid $blue;
             }
 
             .rangeslider__fill {
 
                 background: rgb(2, 0, 36);
-                background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(255, 189, 128, 1) 0%, rgba(255, 31, 142, 1) 100%);
-
+                background: linear-gradient(90deg, #020024 0%, $blue 0%, #008cff 100%);
                 position: absolute;
             }
         }
@@ -393,7 +429,7 @@ header {
             h4 {
                 font-size: 46px;
                 font-weight: 700;
-                color: $red;
+                color: $blue;
             }
 
             p {
@@ -402,19 +438,18 @@ header {
 
             a {
                 padding: 15px 24px;
-                background-color: $red;
+                background-color: $blue;
                 color: #fff;
                 font-weight: 600;
                 font-size: 16px;
                 border-radius: 40px;
                 box-shadow: rgba(100, 100, 111, 0.20) 0px 7px 29px 0px;
                 transition: all .2s ease-in-out;
-                background: rgb(2, 0, 36);
-                background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(255, 189, 128, 1) 0%, rgba(255, 31, 142, 1) 100%);
+                background: #0037ff;
+                // background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(255, 189, 128, 1) 0%, rgba(255, 31, 142, 1) 100%);
 
                 &:hover {
-                    background-color: transparent;
-                    color: #000;
+                    color: #fff;
                     padding: 15px 30px;
                 }
             }
